@@ -1,0 +1,28 @@
+﻿<Page
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:LED_Project"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    
+    xmlns:Controls="using:Coding4Fun.Toolkit.Controls"
+    x:Class="LED_Project.MainPage"
+    
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <ComboBox x:Name="comboBox" SelectedValuePath="Content" HorizontalAlignment="Left" Margin="10,65,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="comboBox_SelectionChanged" PlaceholderText="Static Color">
+            <ComboBoxItem Content="Off"/>
+            <ComboBoxItem Content="Red"/>
+            <ComboBoxItem Content="Green"/>
+            <ComboBoxItem Content="Blue"/>
+        </ComboBox>
+        <Button x:Name="SpecFadeBtn" Content="Spectrum Fade" HorizontalAlignment="Left" Margin="10,130,0,0" VerticalAlignment="Top" Click="SpecFadeBtn_Click"/>
+        <Image x:Name="AsusComparison" Height="592" Margin="0,65,96,0" Width="922" Source="Assets/Asus Comparison Screenshot.png" RenderTransformOrigin="0.5,0.5" VerticalAlignment="Top" HorizontalAlignment="Right"/>
+        <Button x:Name="ColorPickBtn" Content="Custom Color" HorizontalAlignment="Left" Margin="10,200,0,0" VerticalAlignment="Top" Width="119" Click="ColorPickBtn_Click"/>
+        <Button x:Name="RedFade" Content="Red Fade" HorizontalAlignment="Left" Margin="10,272,0,0" VerticalAlignment="Top" Width="120" Click="RedFade_Click"/>
+        <Slider x:Name="RedFadeTimer" HorizontalAlignment="Left" Margin="166,265,0,0" VerticalAlignment="Top" Width="273" ValueChanged="Slider_ValueChanged" Canvas.ZIndex="-20" Value="100" Minimum="1" Maximum="100"/>
+        <Button x:Name="Audio" Content="Audio" HorizontalAlignment="Left" Margin="10,343,0,0" VerticalAlignment="Top" Width="120" Click="Audio_Click"/>
+
+    </Grid>
+</Page>
